@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  h1, h2, h3 {
+    @apply uppercase font-semibold text-center tracking-wide
+  }
+
+  h4 {
+    @apply font-medium my-4 tracking-wide
+  }
+
+  .section {
+    @apply mt-8 mb-8 pl-6 pr-6
+  }
+
+  .primary-btn {
+    @apply rounded-md px-2 py-1 bg-green-300 shadow-sm text-sm font-medium
+  }
+
+  .primary-btn.delete {
+    @apply bg-red-300 font-normal px-1 py-0.5
+  }
+
+
+  input[type="radio"], 
+  input[type="checkbox"] {
+    @apply hidden
+  }
+
+  .bubble {
+    @apply flex items-center justify-center w-5 h-5 rounded-[50%] border-2 border-teal-400 shadow-sm
+  }
+
+  .bubble.priority {
+    @apply border-pink-400
+  }
+
+  .bubble::after {
+    @apply opacity-0 block w-0 h-0 
+  }
+
+  .create-todo label {
+    @apply flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer shadow-md
+  }
+}
