@@ -31,7 +31,7 @@
   }
 
   .bubble {
-    @apply flex items-center justify-center w-5 h-5 rounded-[50%] border-2 border-teal-400 shadow-sm
+    @apply flex items-center justify-center w-5 h-5 rounded-[50%] border-2 border-teal-400 drop-shadow-sm
   }
 
   .bubble.priority {
@@ -39,7 +39,11 @@
   }
 
   .bubble::after {
-    @apply opacity-0 block w-0 h-0 
+    @apply opacity-0 block w-0 h-0 bg-pink-400 rounded-[50%] content-none ease-in-out duration-200
+  }
+
+  input:checked ~ .bubble::after {
+    @apply w-2.5 h-2.5 opacity-100 
   }
 
   .create-todo label {
