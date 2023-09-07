@@ -39,7 +39,11 @@
   }
 
   .bubble::after {
-    @apply opacity-0 block w-0 h-0 bg-pink-400 rounded-[50%] content-none ease-in-out duration-200
+    @apply opacity-0 block w-0 h-0 bg-pink-400 rounded-[50%] content-[''] ease-in-out duration-200
+  }
+
+  .bubble.next::after {
+    @apply bg-teal-400
   }
 
   input:checked ~ .bubble::after {
